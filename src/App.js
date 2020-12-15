@@ -39,34 +39,48 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="app-container">
-        <h1>Emoji Interpreter</h1>
-        <label for="emojiInput" className="text-gray">
-          Enter emoji
-        </label>
-        <input id="emojiInput" className="mb-20" onChange={inputHandlerEmoji} />
+      <div class="app-content">
+        <div className="app-container">
+          <h1>Emoji Interpreter</h1>
+          <label for="emojiInput" className="text-gray">
+            Enter emoji
+          </label>
+          <input
+            id="emojiInput"
+            className="mb-20"
+            onChange={inputHandlerEmoji}
+          />
 
-        <p className="mb-20 text-gray">
-          Meaning:{" "}
-          <span style={{ fontSize: "1.5rem", color: "white" }}>
-            {emojiMeaning}
-          </span>
-        </p>
-        <hr />
-
-        <h3 style={{ marginTop: "30px" }}>List of emojis</h3>
-        {emojiWeknow.map((emoji) => {
-          return (
-            <span
-              key={emoji}
-              onClick={() => emojiClickHandler(emoji)}
-              className="emoji-item"
-            >
-              {emoji}
+          <p className="mb-20 text-gray">
+            Meaning:{" "}
+            <span style={{ fontSize: "1.5rem", color: "white" }}>
+              {emojiMeaning}
             </span>
-          );
-        })}
+          </p>
+          <hr />
+
+          <h3 style={{ marginTop: "30px", marginBottom: "10px" }}>
+            List of emojis
+          </h3>
+          {emojiWeknow.map((emoji) => {
+            return (
+              <span
+                key={emoji}
+                onClick={() => emojiClickHandler(emoji)}
+                className="emoji-item"
+              >
+                {emoji}
+              </span>
+            );
+          })}
+        </div>
       </div>
+      <footer>
+        &lt;/&gt; by{" "}
+        <a target="_blank" rel="noreferrer" href="https://akshayr.netlify.app">
+          Akshay
+        </a>
+      </footer>
     </div>
   );
 }
