@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-// ATTENTION: For some reason, i get error when i try to set actual emoji symbol as key.
-// so i'm putting emoji symbol as value instead of key. I think it maybe an issue with my local pc.
 var emojiDictionary = {
   "😀": "Grinning face",
   "😋": "Face savouring food",
